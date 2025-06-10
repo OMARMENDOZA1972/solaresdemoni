@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solares de Moni - Alquiler Temporario</title>
+    <!-- Carga de Tailwind CSS CDN para estilos responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente Inter desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Carga de Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos personalizados para la paleta de colores marrones */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F5ED; /* Un marrón claro suave para el fondo principal */
+            color: #3C2F2F; /* Un marrón oscuro para el texto principal */
+        }
+        .text-brown-dark {
+            color: #3C2F2F; /* Marrón oscuro para títulos y texto importante */
+        }
+        .bg-brown-light {
+            background-color: #F8F5ED; /* Marrón claro para fondos secundarios */
+        }
+        .bg-brown-medium {
+            background-color: #B5A79E; /* Marrón medio para encabezados o secciones */
+        }
+        .bg-brown-dark {
+            background-color: #3C2F2F; /* Marrón oscuro para el pie de página y elementos de contraste */
+        }
+        .btn-primary {
+            background-color: #8D6E63; /* Un marrón cálido para botones principales */
+            color: white; /* Texto blanco en los botones */
+        }
+        /* Estilo para el botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        }
+        /* Estilos personalizados para la barra de desplazamiento en la galería (opcional) */
+        .gallery-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background-color: #B5A79E; /* Color del "pulgar" de la barra */
+            border-radius: 4px;
+        }
+        .gallery-scroll::-webkit-scrollbar-track {
+            background-color: #E0D7CC; /* Color de la pista de la barra */
+        }
+    </style>
+</head>
+<body class="bg-brown-light text-brown-dark">
+    <!-- Encabezado de la página -->
+    <header class="bg-brown-medium shadow-md py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center rounded-b-lg">
+        <!-- Logo o nombre de la cabaña -->
+        <div class="text-3xl font-bold text-brown-dark mb-4 md:mb-0">
+            Solares <span class="text-white">de Moni</span>
+        </div>
+        <!-- Menú de navegación -->
+        <nav class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 text-lg font-medium">
+            <a href="#galeria" class="hover:text-white transition-colors duration-300 text-brown-dark">Galería</a>
+            <a href="#servicios" class="hover:text-white transition-colors duration-300 text-brown-dark">Servicios</a>
+            <a href="#contacto" class="hover:text-white transition-colors duration-300 text-brown-dark">Contacto</a>
+            <!-- Botón de reserva -->
+            <button class="btn-primary px-6 py-2 rounded-full shadow-lg hover:bg-brown-dark transition-all duration-300 transform hover:scale-105">
+                Reservar Ahora
+            </button>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+
+        <!-- Sección de Bienvenida/Hero -->
+        <section class="text-center mb-16 p-8 bg-white rounded-lg shadow-lg">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-brown-dark mb-6 leading-tight">
+                Tu lugar Perfecto cerca de la Ciudad de Mendoza
+            </h1>
+            <p class="text-xl md:text-2xl text-brown-dark max-w-3xl mx-auto">
+                Descubre la tranquilidad y comodidad de nuestro departamento, ideal para relajarse y estar comodo.
+            </p>
+        </section>
+
+        <!-- Galería de Imágenes -->
+        <section id="galeria" class="mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-brown-dark mb-10">Nuestro Departamento en Fotos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Seis imágenes de ejemplo (placeholders) -->
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Jardin1.jpg" alt="Exterior de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/B5A79E/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Departamento2.jpg" alt="Living de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x450/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Matrimonial1.jpg" alt="Dormitorio principal" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x380/F8F5ED/3C2F2F?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Cocina5.jpg" alt="Cocina equipada" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x420/3C2F2F/F8F5ED?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Baño.jpg" alt="Baño moderno" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x350/B5A79E/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Pileta1.jpg" alt="Pileta de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x410/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Cama-extra.jpg" alt="Pileta de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x410/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Garage.jpg" alt="Pileta de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x410/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Churasquera1.jpg" alt="Pileta de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x410/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Patio.jpg" alt="Pileta de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x410/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Estufa1.jpg" alt="Pileta de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x410/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img src="Monica/Frente.jpg" alt="Pileta de la cabaña" class="w-full h-auto object-cover rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x410/8D6E63/FFFFFF?text=Cabaña';" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="servicios" class="mb-16 p-8 bg-white rounded-lg shadow-lg">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-brown-dark mb-10">Nuestros Servicios y Comodidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta de Servicio 1 -->
+                <div class="flex items-start p-4 rounded-lg bg-brown-light shadow-md">
+                    <i class="fas fa-wifi text-3xl text-brown-dark mr-4"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brown-dark mb-2">Wi-Fi de Alta Velocidad</h3>
+                        <p class="text-brown-dark">Mantente conectado con acceso a internet ilimitado durante tu estadía.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta de Servicio 2 -->
+                <div class="flex items-start p-4 rounded-lg bg-brown-light shadow-md">
+                    <i class="fas fa-snowflake text-3xl text-brown-dark mr-4"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brown-dark mb-2">Ventiladores y Calefacción</h3>
+                        <p class="text-brown-dark">Disfruta de la temperatura ideal en cualquier época del año.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta de Servicio 3 -->
+                <div class="flex items-start p-4 rounded-lg bg-brown-light shadow-md">
+                    <i class="fas fa-kitchen-set text-3xl text-brown-dark mr-4"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brown-dark mb-2">Cocina Equipada</h3>
+                        <p class="text-brown-dark">Prepara tus comidas favoritas con todos los utensilios necesarios.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta de Servicio 4 -->
+                <div class="flex items-start p-4 rounded-lg bg-brown-light shadow-md">
+                    <i class="fas fa-bed text-3xl text-brown-dark mr-4"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brown-dark mb-2">Ropa de Cama y Toallas</h3>
+                        <p class="text-brown-dark">Todo lo necesario para una estadía cómoda, sin preocuparte por nada.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta de Servicio 5 -->
+                <div class="flex items-start p-4 rounded-lg bg-brown-light shadow-md">
+                    <i class="fas fa-car text-3xl text-brown-dark mr-4"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brown-dark mb-2">Estacionamiento Gratuito</h3>
+                        <p class="text-brown-dark">Espacio seguro y privado para tu vehículo.</p>
+                    </div>
+                </div>
+                <!-- Tarjeta de Servicio 6 -->
+                <div class="flex items-start p-4 rounded-lg bg-brown-light shadow-md">
+                    <i class="fas fa-fire-burner text-3xl text-brown-dark mr-4"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brown-dark mb-2">Pileta y Parrilla Privada</h3>
+                        <p class="text-brown-dark">Disfruta de la pileta mientras te haces un asado al aire libre con tus seres queridos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="p-8 bg-white rounded-lg shadow-lg">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-brown-dark mb-10">Contáctanos</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Formulario de Contacto -->
+                <div>
+                    <h3 class="text-3xl font-semibold text-brown-dark mb-6">Envíanos un Mensaje</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="nombre" class="block text-lg font-medium text-brown-dark mb-2">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" class="w-full p-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brown-medium transition-all duration-200" placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-brown-dark mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brown-medium transition-all duration-200" placeholder="tu.email@ejemplo.com">
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-lg font-medium text-brown-dark mb-2">Teléfono (Opcional)</label>
+                            <input type="tel" id="telefono" name="telefono" class="w-full p-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brown-medium transition-all duration-200" placeholder="+54 9 11 1234 5678">
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block text-lg font-medium text-brown-dark mb-2">Tu Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" class="w-full p-3 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brown-medium transition-all duration-200" placeholder="Quisiera consultar por..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3 rounded-lg shadow-lg hover:bg-brown-dark transition-all duration-300 transform hover:scale-105 text-xl font-semibold">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+                <!-- Información de Contacto y Mapa -->
+                <div>
+                    <h3 class="text-3xl font-semibold text-brown-dark mb-6">Encuéntranos</h3>
+                    <p class="text-lg mb-4 text-brown-dark">
+                        <i class="fas fa-map-marker-alt mr-3 text-brown-medium"></i>
+                        Dirección: Barrio Solares de Roca Mza E Casa 19, Las Heras, Mendoza, Argentina
+                    </p>
+                    <p class="text-lg mb-4 text-brown-dark">
+                        <i class="fas fa-phone mr-3 text-brown-medium"></i>
+                        Teléfono: <a href="tel:+5491155551234" class="hover:underline text-brown-dark">+54 9 261 6311619</a>
+                    </p>
+                    <p class="text-lg mb-6 text-brown-dark">
+                        <i class="fas fa-envelope mr-3 text-brown-medium"></i>
+                        Email: <a href="mailto:info@cabanarelajo.com" class="hover:underline text-brown-dark">solaresdemoni@gmail.com</a>
+                    </p>
+                    <!-- Mapa de Google Maps (iframe de ejemplo) -->
+                    <div class="h-80 w-full rounded-lg overflow-hidden shadow-md">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.434524458514!2d-64.49842528476404!3d-34.79374097486831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d3148149e6f6a7%3A0x6a0f7c2a7e7e7e7e!2sArgentina!5e0!3m2!1ses-419!2sar!4v1678901234567!5m2!1ses-419!2sar"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-brown-dark text-white py-8 px-6 md:px-12 mt-16 rounded-t-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <p class="text-lg">&copy; 2025 Solares de Moni. Todos los derechos reservados.</p>
+            </div>
+            <!-- Iconos de redes sociales -->
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.facebook.com/tucabana" target="_blank" aria-label="Facebook" class="hover:text-brown-medium transition-colors duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/tucabana" target="_blank" aria-label="Instagram" class="hover:text-brown-medium transition-colors duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/5492612450078?text=Hola!%20Quisiera%20consultar%20sobre%20la%20cabaña." target="_blank" aria-label="WhatsApp"
+       class="whatsapp-float bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+</body>
+</html>
